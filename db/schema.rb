@@ -10,19 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_19_192138) do
+ActiveRecord::Schema.define(version: 2019_10_19_195443) do
 
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.text "body"
-    t.string "author"
-    t.datetime "publication_date"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "recorridos", force: :cascade do |t|
-    t.string "Lugar"
+  create_table "ruta", force: :cascade do |t|
+    t.string "nombre"
     t.text "descripcion"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
