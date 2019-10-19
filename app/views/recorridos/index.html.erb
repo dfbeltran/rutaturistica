@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+  <tbody>
+  
+
+<h1>Recorridos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lugar</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+    <% @recorridos.each do |recorrido| %>
+      <tr>
+        <td><%= recorrido.Lugar %></td>
+        <td><%= recorrido.descripcion %></td>
+        <td><%= link_to 'Show', recorrido %></td>
+        <td><%= link_to 'Edit', edit_recorrido_path(recorrido) %></td>
+        <td><%= link_to 'Destroy', recorrido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recorrido', new_recorrido_path %>
